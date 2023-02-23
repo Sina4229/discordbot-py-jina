@@ -83,7 +83,7 @@ async def on_message(message):
         await message.delete()
         if message.author.guild_permissions.administrator:
             notice = message.content[4:]
-            channel = client.get_channel(1071441774549147769)
+            channel = client.get_channel(1071265290807169085)
             embed = discord.Embed(title="지나티콘 공지", description="공지사항 내용은 항상 숙지 해주시기 바랍니다\n――――――――――――――――――――――――――――\n\n{}\n\n――――――――――――――――――――――――――――".format(notice),timestamp=datetime.datetime.now(pytz.timezone('UTC')), color=0x00ff00)
             embed.set_footer(text="Bot Made by.  Sina #4229 | 담당 관리자 : {}".format(message.author), icon_url="https://ibb.co/MhkJQ2b")
             embed.set_thumbnail(url="https://ibb.co/MhkJQ2b")
