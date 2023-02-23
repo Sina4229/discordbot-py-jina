@@ -21,12 +21,12 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game("문의는 Sina#4229"))
 
 @client.event
-    async def on_member_join(member):
-        channel = client.get_channel(1076216516330127501)
-        channel2 = client.get_channel(1076202522190033036)
-        user = member.name
-        embed = discord.Embed(title="입장로그", description= " ",timestamp=datetime.datetime.now(pytz.timezone('UTC')),color=0x00ff00)
-        embed.add_field(name=" ", value=""".      /)⋈/) 
+async def on_member_join(member):
+    channel = client.get_channel(1076216516330127501)
+    channel2 = client.get_channel(1076202522190033036)
+    user = member.name
+    embed = discord.Embed(title="입장로그", description= " ",timestamp=datetime.datetime.now(pytz.timezone('UTC')),color=0x00ff00)
+    embed.add_field(name=" ", value=""".      /)⋈/) 
 \n  (｡•ㅅ•｡)♡ 
 ┏--∪-∪━━━━━━━━━━━━━━━━━━┓ 
 ┊ ┊ ┊ ┊  ┊ 　　.　　　 *.    . ..  
@@ -42,8 +42,8 @@ async def on_ready():
 2    ┊{} 채널에서 인증  
      완료를 해주세요. 
 \n      ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ""".format(user, channel2.mention))
-        embed.set_footer(text="Bot Made by. Sina#4229")
-        await channel.send(embed=embed)
+    embed.set_footer(text="Bot Made by. Sina#4229")
+    await channel.send(embed=embed)
         
 @client.event
 async def on_message(message):
